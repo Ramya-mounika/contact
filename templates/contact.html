@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    {% include 'cdnlines.html' %}
+  </head>
+  <style media="screen">
+    input[name]{
+      margin-top: -10px;
+    }
+  </style>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="offset-md-4 col-md-3">
+          <h4 class="text-center font-weight-bold">Student Details Here</h4>
+          <form method='POST'>
+            {% csrf_token %}
+            <label>Enter FirstName:</label>
+            <input type="text" class="form-control" name='fname'>
+            <label>Enter LastName:</label>
+            <input type="text" class="form-control" name='lname'>
+            <label>Enter Course:</label>
+            <input type="text" class="form-control" name='course'>
+            <label>Enter Age:</label>
+            <input type="number" class="form-control" name='age'>
+            <label>Enter Gender:</label>
+            <input type="text" class="form-control" name='gender'>
+            <label>Enter Email ID:</label>
+            <input type="email" class="form-control" name='email'>
+            <label>Enter Mobile.NO:</label>
+            <input type="number" class="form-control" name='mobile'>
+            <label>Enter Location:</label>
+            <input type="text" class="form-control"name='loc'>
+            <center>
+            <input type="Submit" value="Save" class="btn btn-outline-primary btn-lg mt-2 font-weight-bold">
+            <input type="reset" value="Clear" class="btn btn-outline-warning btn-lg mt-2 font-weight-bold">
+            </center>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
